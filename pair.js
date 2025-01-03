@@ -15,7 +15,7 @@ const {
 } = require("gifted-baileys");
 
 function randomMegaId(length = 6, numberLength = 4) {
-                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                       let result = '';
                       for (let i = 0; i < length; i++) {
                       result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -27,8 +27,8 @@ function randomMegaId(length = 6, numberLength = 4) {
 async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
-  email: '', // // Your Mega A/c Email Here
-  password: '' // Your Mega A/c Password Here
+  email: 'shabansahibzada859', // // Your Mega A/c Email Here
+  password: 'shaban585' // Your Mega A/c Password Here
 }).ready
         console.log('Mega storage initialized.');
         if (!fs.existsSync(credsPath)) {
